@@ -1,0 +1,100 @@
+<canvas #bgCanvas class="bg-canvas"></canvas>
+<div class="portfolio-wrapper" *ngIf="profile">
+  
+  <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="'Toggle Theme'">
+    <span class="material-symbols-outlined">{{ isLightMode ? 'dark_mode' : 'light_mode' }}</span>
+  </button>
+
+  <!-- Hero Section -->
+  <header class="hero container animate-fade-in">
+    <div class="hero-content">
+      <p class="greeting">Hi, I'm</p>
+      <h1 class="name">{{ profile.name }}</h1>
+      <h2 class="title">{{ profile.title }}</h2>
+      <p class="summary">{{ profile.summary }}</p>
+      
+      <div class="social-links">
+        <a [href]="profile.linkedin" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin" style="margin-right: 8px;"></i> LinkedIn</a>
+        <a [href]="profile.github" target="_blank" class="social-btn"><i class="fa-brands fa-github" style="margin-right: 8px;"></i> GitHub</a>
+        <a [href]="profile.leetcode" target="_blank" class="social-btn"><i class="fa-solid fa-code" style="margin-right: 8px;"></i> LeetCode</a>
+        <a href="YOUR_DRIVE_LINK_HERE" target="_blank" class="social-btn primary"><span class="material-symbols-outlined icon" style="margin-right: 8px;">description</span> Check Resume</a>
+        <a [href]="'mailto:' + profile.email" class="social-btn primary"><span class="material-symbols-outlined icon" style="margin-right: 8px;">mail</span> Email Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Experience Section -->
+  <section class="experience-section container animate-fade-in" *ngIf="experience?.length">
+    <h3 class="section-title">Experience</h3>
+    <div class="timeline">
+      <div class="glass-card exp-card" *ngFor="let exp of experience">
+        <div class="exp-header">
+          <h4>{{ exp.company }}</h4>
+          <span class="duration">{{ exp.duration }}</span>
+        </div>
+        <h5 class="role">{{ exp.role }}</h5>
+        <ul class="details-list">
+          <li *ngFor="let detail of exp.details">{{ detail }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section container animate-fade-in" *ngIf="projects?.length">
+    <h3 class="section-title">Featured Projects</h3>
+    <div class="grid-container">
+      <div class="glass-card project-card" *ngFor="let proj of projects">
+        <div class="proj-header">
+          <h4>{{ proj.title }}</h4>
+          <span class="date">{{ proj.date }}</span>
+        </div>
+        <ul class="details-list">
+          <li *ngFor="let detail of proj.details">{{ detail }}</li>
+        </ul>
+        <div class="tech-stack" *ngIf="proj.techStack?.length">
+          <span class="tech-tag" *ngFor="let tech of proj.techStack">
+            <span class="material-symbols-outlined tech-icon">{{ getTechIcon(tech) }}</span>
+            {{ getTechName(tech) }}
+          </span>
+        </div>
+        <a [href]="proj.githubLink" target="_blank" class="github-link">View on GitHub &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section container animate-fade-in" *ngIf="skills">
+    <h3 class="section-title">Technical Skills</h3>
+    <div class="skills-grid">
+      <div class="glass-card skill-category" *ngFor="let category of objectKeys(skills)">
+        <h4>{{ category }}</h4>
+        <div class="skill-tags">
+          <span class="tag" *ngFor="let skill of skills[category]">
+            <span class="material-symbols-outlined skill-icon">{{ getTechIcon(skill) }}</span>
+            {{ getTechName(skill) }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section class="achievements-section container animate-fade-in" *ngIf="achievements?.length">
+    <h3 class="section-title">Achievements</h3>
+    <div class="glass-card">
+      <ul class="details-list">
+        <li *ngFor="let achievement of achievements">{{ achievement }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Designed & Built by {{ profile.name }}</p>
+    <p class="contact-info">{{ profile.phone }} | {{ profile.email }}</p>
+  </footer>
+</div>
+
+<div class="loading" *ngIf="!profile">
+  <div class="spinner"></div>
+</div>

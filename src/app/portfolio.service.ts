@@ -14,9 +14,9 @@ export class PortfolioService {
       title: "Software Engineer & Data Enthusiast",
       summary: "Passionate Software Engineer with experience in building robust scalable systems and data pipelines.",
       email: "devyanshbansal123@gmail.com",
-      linkedin: "https://linkedin.com/in/devyanshbansal",
+      linkedin: "https://www.linkedin.com/in/devyansh-bansal/",
       github: "https://github.com/devyanshbansal",
-      leetcode: "https://leetcode.com/devyanshbansal"
+      leetcode: "https://leetcode.com/u/erenyeager7814/"
     });
   }
 

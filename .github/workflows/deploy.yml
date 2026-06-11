@@ -38,7 +38,7 @@ jobs:
       - name: Build Angular Project
         # NOTE: If your repository is NOT named username.github.io, you must update the base-href below to match your repository name!
         # For example, if your repo is named "my-portfolio", change it to: --base-href /my-portfolio/
-        run: npm run build -- --configuration production --base-href /
+        run: npm run build -- --configuration production --base-href /portfolio-static/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

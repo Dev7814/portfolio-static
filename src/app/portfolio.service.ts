@@ -15,7 +15,7 @@ export class PortfolioService {
       summary: "Passionate Software Engineer with experience in building robust scalable systems and data pipelines.",
       email: "devyanshbansal123@gmail.com",
       linkedin: "https://www.linkedin.com/in/devyansh-bansal/",
-      github: "https://github.com/devyanshbansal",
+      github: "https://github.com/Dev7814",
       leetcode: "https://leetcode.com/u/erenyeager7814/"
     });
   }
@@ -46,7 +46,7 @@ export class PortfolioService {
           "Integrated cleaned data into Power BI dashboards for actionable insights."
         ],
         techStack: ["cloud Azure Data Factory", "database PostgreSQL", "hard_drive Azure Blob", "bar_chart Power BI"],
-        githubLink: "https://github.com/devyanshbansal/ansell-pipeline"
+        githubLink: "https://github.com/Dev7814/ansell-pipeline"
       },
       {
         title: "E-commerce Data Pipeline",
@@ -57,7 +57,7 @@ export class PortfolioService {
           "Designed scalable architecture supporting both real-time and batch processing workloads."
         ],
         techStack: ["bolt Databricks", "cloud_sync Event Hub", "account_tree Logic Apps", "storage SQL Server"],
-        githubLink: "https://github.com/devyanshbansal/ecommerce-pipeline"
+        githubLink: "https://github.com/Dev7814/ecommerce-pipeline"
       }
     ]);
   }

@@ -24,12 +24,28 @@ export class PortfolioService {
     return of([
       {
         company: "American Express",
-        role: "Software Engineer Intern",
-        duration: "May 2024 - Jul 2024",
+        role: "Associate – Product Development (Credit & Fraud Risk)",
+        duration: "Jan 2026 - Present",
         details: [
-          "Optimized query execution reducing time by 40%.",
-          "Designed data ingestion pipelines ensuring 99.9% uptime.",
-          "Collaborated with cross-functional teams for seamless integrations."
+          "Develop and maintain Java-based backend systems for data quality validation using Event Engine, HBase, and Hive.",
+          "Designed scalable validation logic for high-volume financial datasets ensuring reliability and consistency.",
+          "Contributed to migration of legacy system to Qalibrate (GCP) leveraging BigQuery and cloud-native transformations.",
+          "Refactored backend modules for improved scalability and maintainability in distributed environments.",
+          "Collaborated across teams to integrate new services and optimize system workflows.",
+          "Developed and enhanced data quality rules to identify anomalies and inconsistencies in credit and fraud datasets, improving overall data reliability."
+        ]
+      },
+      {
+        company: "Coforge",
+        role: "Software Engineer – Data Platforms",
+        duration: "Jul 2024 - Dec 2025",
+        details: [
+          "Achieved 94% in comprehensive Data Engineering training program.",
+          "Developed and optimized an e-commerce data pipeline, improving processing efficiency by 30%.",
+          "Orchestrated real-time and batch ingestion using Azure Databricks, Event Hub, and Data Factory.",
+          "Designed data solutions using Azure SQL and Data Lake, enabling 20% faster analytical queries.",
+          "Implemented security using Key Vault, RBAC, and VNets to ensure data confidentiality.",
+          "Worked with Matillion ETL, dbt, and Snowflake to build and manage scalable data transformation workflows."
         ]
       }
     ]);
